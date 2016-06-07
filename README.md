@@ -1,4 +1,4 @@
-##Dependencies: 
+##Dependencies:
 Node.js
 
 ##Install:
