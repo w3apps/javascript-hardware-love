@@ -1,0 +1,22 @@
+{
+  "name": "javascript-hardware-love",
+  "version": "0.0.1",
+  "description": "Javascript + Hardware = Love",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3apps/javascript-hardware-love.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w3apps/javascript-hardware-love/issues"
+  },
+  "homepage": "https://github.com/w3apps/javascript-hardware-love#readme",
+  "dependencies": {
+    "johnny-five": "^0.9.53"
+  }
+}
