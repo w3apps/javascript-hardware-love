@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Led</title>
+</head>
+<body>
+    <button onClick="lightLed(true);">On</button>
+    <button onClick="lightLed(false);">Off</button>
+
+    <script src="socket.io-client/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost:3000');
+
+        function lightLed(lightIt) {
+            socket.emit('lightLed', lightIt);
+        };
+    </script>
+</body>
+</html>
