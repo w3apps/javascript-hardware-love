@@ -9,12 +9,13 @@ const io = require('socket.io')(httpServer);
 
 const projectRoot = process.cwd();
 const appPort = 3000;
+const ledPin = 12;
 
 let led; // gets assigned a led after the board is connected
 
 //  === Arduino board ===
 board.on('ready', function() {
-    led = new five.Led(13); // 13 = onboard led
+    led = new five.Led(ledPin);
 });
 
 // === HTTP server request ===
@@ -24,7 +25,6 @@ app.get('/', function (req, res) {
 
 app.get('*.js', function (req, res) {
     res.sendFile(path.join(projectRoot, 'node_modules', req.url));
-    console.log(path.join(projectRoot, 'node_modules', req.url));
 });
 
 httpServer.listen(appPort, function () {

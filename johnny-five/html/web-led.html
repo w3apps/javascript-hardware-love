@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Led</title>
+    <style>
+        button {
+            width: 100px;
+            height: 80px;
+        }
+        .onBtn {
+            background: green;
+        }
+        .offBtn {
+            background: red;
+        }
+    </style>
 </head>
 <body>
-    <button onClick="lightLed(true);">On</button>
-    <button onClick="lightLed(false);">Off</button>
+    <button class="onBtn" onClick="lightLed(true);">On</button>
+    <button class="offBtn" onClick="lightLed(false);">Off</button>
 
     <script src="socket.io-client/socket.io.js"></script>
     <script>
@@ -14,7 +26,7 @@
 
         function lightLed(lightIt) {
             socket.emit('lightLed', lightIt);
-        };
+        }
     </script>
 </body>
 </html>
