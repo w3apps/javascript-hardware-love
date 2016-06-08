@@ -1,5 +1,6 @@
 ##Dependencies:
-Node.js
+Node.js  
+Arduino Uno board with the same layout as `./fritzing/Arduino - PIR sensor_bb.png`
 
 ##Install:
 run `npm install`
